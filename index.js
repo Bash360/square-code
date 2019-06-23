@@ -60,7 +60,7 @@ function getSquare(number) {
 			break;
 		} else {
 			numberCopy += 1;
-			root == 1;
+
 		}
 	}
 	column = Math.sqrt(numberCopy);
@@ -77,7 +77,7 @@ function getSquare(number) {
  */
 function formatRowsColumns(sentence, columns, rows) {
 	let sentenceLength = sentence.length;
-	let sentenceCopy = sentence + ' '.repeat(rows * columns - sentenceLength); //added space to make up for rows that are characters short
+	let sentenceCopy = sentenceLength<columns*rows?sentence + ' '.repeat(rows * columns - sentenceLength):sentence; //added space to make up for rows that are characters short
 	let formatted = [];
 	let word = '';
 	let count = 0;
